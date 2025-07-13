@@ -2,7 +2,7 @@
 
 // 1) Syntax
 
-/*function sayHello(){
+function sayHello(){
     console.log("Hello!");
 
     sayHello()
@@ -26,20 +26,29 @@ const addNumbers =(...nums) =>  //spread operation
 {
     console.log(nums);
 }
-addNumbers(10,22,3,23,4);*/
+addNumbers(10,22,3,23,4);
 
 
 
 
 // 3) hoisting
 
-sayHey();
 
-function sayHey() 
+const sayHey=()=> 
 {
     console.log("Hey there");
 }
+sayHey();
 
 
 
 // 4) This Keyword
+
+const obj ={
+    value: 20,
+    myFunction: function()
+    {
+        console.log("Value is"+ this.value);
+    },
+};
+obj.myFunction();
